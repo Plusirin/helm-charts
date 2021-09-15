@@ -8,11 +8,9 @@ STORAGECLASS := rook-cephfs
 install:
 	helm install $(RELEASE_NAME) . \
 	--namespace $(NAMESPACE) \
-	--set portaldb.host=192.168.100.51 \
-	--set portaldb.port=30336 \
 	--set portaldb.userName=apollo \
 	--set portaldb.password=apollo \
-	--set portaldb.service.enabled=true \
+	--set portaldb.service.enabled=false \
 	--set service.type=NodePort \
 	--set config.envs="pro\,test" \
 	--set config.metaServers.pro=http://apollo-service-pro-apollo-configservice:8080 \

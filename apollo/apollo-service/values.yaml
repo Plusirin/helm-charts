@@ -16,8 +16,8 @@
 configdb:
   name: apollo-configdb
   # apolloconfigdb host
-  host: 192.168.100.51
-  port: 30337
+  host: "" 
+  port: 3306
   dbName: ApolloConfigDB
   # apolloconfigdb user name
   userName: "apollo"
@@ -26,7 +26,7 @@ configdb:
   connectionStringProperties: characterEncoding=utf8
   service:
     # whether to create a Service for this host or not
-    enabled: true
+    enabled: false
     fullNameOverride: ""
     port: 3306
     type: ClusterIP

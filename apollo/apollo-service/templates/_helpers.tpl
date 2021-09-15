@@ -23,7 +23,7 @@ Service name for configdb
 {{- printf "%s-%s" .Release.Name .Values.configdb.name | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 {{- else -}}
-{{- .Values.configdb.host -}}
+{{- .Release.Name -}}-mysql
 {{- end -}}
 {{- end -}}
 

@@ -46,7 +46,7 @@ Service name for portaldb
 {{- printf "%s-%s" .Release.Name .Values.portaldb.name | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 {{- else -}}
-{{- .Values.portaldb.host -}}
+apollo-service-pro-mysql
 {{- end -}}
 {{- end -}}
 
